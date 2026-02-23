@@ -13,7 +13,7 @@ wss.on('connection',(socket, request) => {
         console.log({rawData: rawData});
 
         wss.clients.forEach((client) => {
-            if(client.readyState === WebSocket.OPEN) client.send(`Server Broadcast : ${message}`);
+            if(client.readyState === WebSocket.OPEN) client.send(`Server Broadcasted this  : ${message}`);
         })
     });
     
@@ -22,7 +22,7 @@ wss.on('connection',(socket, request) => {
     })
     
     socket.on('close', () => {
-        console.log('client disconnected')
+        console.log('client disconnected from the server')
     })
 });
 
