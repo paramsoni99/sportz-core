@@ -1,6 +1,5 @@
 import { WebSocketServer, WebSocket } from "ws";
 
-// Changed port from 8080 to 8081 here 👇
 const wss = new WebSocketServer({ port: 8081 });
 
 //ps notes: 0 means for connection , 1 is open , 2 means closing , 3 is closed
